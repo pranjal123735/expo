@@ -65,7 +65,8 @@ export function NotesScreen() {
                       <View style={[STYLES.NOTESCREEN_ICON, {left:20,} ]}>
                         <CustomIconButton icon="camera" onPress={() => handleAppClick('Whatsapp')} iconColor={MD3Colors.primary50} size={25} />
                         <CustomIconButton icon="lock-open" onPress={() => handleAppClick('Whatsapp')}  iconColor={MD3Colors.primary50} size={25} />
-                        <CustomIconButton icon="delete" onPress={() => handleAppClick('Whatsapp')} iconColor={MD3Colors.primary50} size={20} />
+                        <CustomIconButton icon="delete" onPress={() => handleAppClick('Whatsapp')} iconColor={MD3Colors.primary50} size={25} />
+                        <CustomIconButton icon="share" onPress={() => handleAppClick('Whatsapp')} iconColor={MD3Colors.primary50} size={25} />
                         {/* <CustomIconButton icon="format-color-text" onPress={() => handleAppClick('Whatsapp')} iconColor={MD3Colors.primary50} size={25} /> */}
                       </View>
                 </View>
