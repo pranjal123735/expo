@@ -5,7 +5,7 @@ import CustomButton from './button';
 import CustomIconButton from './iconButton';
 import { STYLES } from '../STYLES/STYLES';
 
-const DialogBox = ({ visible, setVisible, onHide}) => {
+const DialogBox = ({ visible, setVisible, onHide,children}) => {
   // const showDialog = () => setVisible(true);
   const hideDialog = () => {
     setVisible(false);
@@ -24,17 +24,7 @@ const DialogBox = ({ visible, setVisible, onHide}) => {
         onRequestClose={hideDialog} 
       >
         <View style={STYLES.MODAL_CONTAINER}>
-            <View style={STYLES.MODAL_TASK_BUTTON_CONTAINER}>
-              <View style={STYLES.MODAL_TASK_BUTTON}>
-                <CustomButton buttonText="Meeting" icon="briefcase"  onPress={()=>{showDialog()}}/>
-              </View>
-              <View style={STYLES.MODAL_TASK_BUTTON}>
-                <CustomButton buttonText="Birthday" icon="cake"  onPress={()=>{showDialog()}}/>
-              </View>
-              <View style={STYLES.MODAL_TASK_BUTTON}>
-                <CustomButton buttonText="Others" icon="briefcase"  onPress={()=>{showDialog()}}/>
-              </View>
-            </View>
+            {children}
             
             <View style={STYLES.MODAL_CLOSE_ICON}>
                 <CustomIconButton icon="window-close" onPress={()=>{hideDialog()}} iconColor={MD3Colors.error50} />

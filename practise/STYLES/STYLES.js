@@ -84,7 +84,8 @@ export const STYLES = {
     NOTESCREEN_CONTAINER:{
         flex:1,
         width:'100%',
-        paddingTop:'4%'
+        paddingTop:'4%',
+        backgroundColor:'white'
     },
 
     NOTESSCREEN_PARENT:{
@@ -113,7 +114,7 @@ export const STYLES = {
         width: '90%',
         alignItems: 'center', 
         marginBottom: '10%',
-        backgroundColor:'#d6d2d5',
+        backgroundColor:'white',
         borderRadius: 25,
     },
 
@@ -142,7 +143,34 @@ export const STYLES = {
     },
 
     NOTESCREEN_INPUTFIELD:{
-        marginTop:'5%'
+        height:'70%',
+        backgroundColor:'white',
+        marginBottom:'5%'
+    },
+
+    NOTESCREEN_INPUTFIELD_PARENT:{
+
+        marginTop:'5%',
+        height:'100%',
+        marginBottom:'5%'
+    },
+
+    NOTESCREEN_INPUTFIELD_CONTAINER:{
+
+        height:'80%',
+        backgroundColor:'white'
+    },
+
+    NOTESCREEN_INPUTFIELD_ICON_CONTAINER:{
+        position: 'relative', 
+        bottom:'17%',
+        width:"90%",
+        marginLeft:'5%',
+        padding:'2%'
+    },
+
+    NOTESCREEN_INPUTFIELD_ICON_CONTAINER_DIVIDER:{
+        height: '2%', 
     },
 
     INPUT_FIELD_SLIDER_CONTAINER_PARAGRAPH:{
@@ -152,28 +180,51 @@ export const STYLES = {
         borderRadius:20,
         padding: '3%',
         height:'100%',
-        backgroundColor:'#d6d2d5',
-        marginLeft:'5%'
+        backgroundColor:'white',
+        marginLeft:'5%',
+        marginBottom:'5%'
     },
 
-    NOTESCREEN_ICON:{
-        display:'grid',
+    NOTESCREEN_ICON_LEFT:{
+        display:'flex',
+        flex:1,
         flexDirection: "row" ,
-        justifyContent: 'LEFT'
+    },
+
+    NOTESCREEN_ICON_RIGHT:{
+        position:'absolute',
+        right:'1%'
     },
 
     NOTESCREEN_BUTTON_CONTAINER:{
         display:'flex',
         justifyContent:'center',
         width:"100%",
-        marginTop:'5%',
-        flex:1
+        marginBottom:'5%',
     },
 
     NOTESCREEN_BUTTON_PARENT:{
-        position:'absolute',
+        position:'relative',
         alignItems:'center',
         alignSelf:'center',
-        bottom:'10%'
+    },
+
+    NOTESCREEN_TAGS:{
+
+        display:'flex',
+        flexDirection:'row',
+        bottom:'1%'
+    },
+
+    INPUT_FIELD_PASSWORD:{
+
+        borderColor: "black",
+        width: "70%",
+        borderWidth: 1,
+        borderRadius:20,
+        padding: '2%',
+        backgroundColor:'white',
+        marginLeft:'5%',
+        marginBottom:'5%',
     }
 }

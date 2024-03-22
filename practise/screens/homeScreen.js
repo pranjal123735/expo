@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button,Provider,Portal,Dialog,RadioButton } from 'react-native-paper';
+import { Button,Provider,Portal,Dialog,RadioButton,MD3Colors } from 'react-native-paper';
 import { StyleSheet, Text, View,SafeAreaView,ScrollView,Paragraph,Modal, } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native'
 
@@ -8,6 +8,7 @@ import CustomButton from '../components/button';
 import {STYLES} from '../STYLES/STYLES'
 import Cards from '../components/cards';
 import DialogBox from '../components/dialogBox';
+import CustomIconButton from '../components/iconButton';
 
 export function HomeScreen() {
 
@@ -23,12 +24,34 @@ export function HomeScreen() {
     setVisible(true)
   }
 
+  const hideDialog = () => {
+    setVisible(false);
+    // onHide(false);
+  };
+
+
   
 
     return (
       <View style={styles.container}>
         <SafeAreaView style={STYLES.HOMESCREEN_CONTAINER}>
-          {visible && <DialogBox  visible={visible} setVisible={setVisible} onHide={handleDialogHide} />}
+          {visible && <DialogBox  visible={visible} setVisible={setVisible} onHide={handleDialogHide} >
+            <View style={STYLES.MODAL_TASK_BUTTON_CONTAINER}>
+                <View style={STYLES.MODAL_TASK_BUTTON}>
+                  <CustomButton buttonText="Meeting" icon="briefcase"  onPress={()=>{showDialog()}}/>
+                </View>
+                <View style={STYLES.MODAL_TASK_BUTTON}>
+                  <CustomButton buttonText="Birthday" icon="cake"  onPress={()=>{showDialog()}}/>
+                </View>
+                <View style={STYLES.MODAL_TASK_BUTTON}>
+                  <CustomButton buttonText="Others" icon="briefcase"  onPress={()=>{showDialog()}}/>
+                </View>
+              </View>
+              
+              <View style={STYLES.MODAL_CLOSE_ICON}>
+                  <CustomIconButton icon="window-close" onPress={()=>{hideDialog()}} iconColor={MD3Colors.error50} />
+              </View>
+            </DialogBox>}
             <View style={STYLES.HOMESCREEN_PARENT}>
                 <Text style={STYLES.HOMESCREEN_TEXT}>Create Task:</Text>
                 <View style={STYLES.HOMESCREEN_CHILD}>
